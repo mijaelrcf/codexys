@@ -36,7 +36,7 @@ npm run lint     # linter (oxlint)
 
 ```text
 public/
-  favicon.png            # temporal, generado desde el logo
+  favicon.png            # generado desde la marca CX
 src/
   assets/
     codexys-nombre.png   # nombre CODEXYS (transparente, Header/Footer)
@@ -49,7 +49,7 @@ src/
     sections/
       Hero.tsx           # propuesta de valor + 2 CTAs
       Servicios.tsx      # grid de 4 servicios
-      Stack.tsx          # stack principal + badges extra
+      Stack.tsx          # principal .NET/C#/SQL Server + secundario + extras
       Proceso.tsx        # timeline de 3 pasos
       Contacto.tsx       # título, subtítulo y formulario mock
     ui/
@@ -87,8 +87,8 @@ AGENTS.md                # lineamientos del proyecto para agentes
 
 - Azul eléctrico `#2E7DFF` (primario), rojo `#FF1E2D` (acento),
   fondo oscuro `#05070F` (tokens en `@theme` en `src/index.css`).
-- `codexys-nombre.png` (nombre CODEXYS, transparente): Header (`h-8`) y Footer
-  (`h-7`), directo sin wrappers, vale en ambos temas.
+- `codexys-nombre.png` (nombre CODEXYS sin slogan, transparente): Header (`h-10`,
+  barra `h-16`) y Footer (`h-8`), directo sin wrappers, vale en ambos temas.
 - `codexys-cx.png` (marca CX, transparente): visual del Hero y `public/favicon.png`.
 - `codexys-logo.png` (logo completo, fondo negro no transparente): reservado para
   usos sobre oscuro u OG-image; si se usa en UI clara, envolver en contenedor oscuro.
@@ -102,11 +102,19 @@ backend real (Formspree, Resend, etc.), reemplazar la simulación en
 
 ## Despliegue
 
-Build estático listo para cualquier hosting (`dist/`):
+Build estático (`dist/`), sin routing de servidor (navegación por anclas `#`),
+listo para cualquier hosting estático.
 
 ```bash
 npm run build
 ```
+
+### Cloudflare Pages
+
+- Método: conectar el repo de GitHub (o subir `dist/` manualmente).
+- Preset de framework: **Vite**.
+- Comando de build: `npm run build` — directorio de salida: `dist`.
+- No requiere variables de entorno ni reglas de redirección.
 
 ## Licencia
 

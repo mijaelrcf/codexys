@@ -81,8 +81,8 @@ Reglas:
 
 Logo (en `src/assets/`, todos con fondo transparente salvo el completo):
 
-- `codexys-nombre.png` — nombre CODEXYS, uso en Header (`h-10 w-auto`) y Footer
-  (`h-8 w-auto`), directo sin wrappers (vale en ambos temas).
+- `codexys-nombre.png` — nombre CODEXYS, uso en Header (`h-10 w-auto`, barra `h-16`)
+  y Footer (`h-8 w-auto`), directo sin wrappers (vale en ambos temas).
 - `codexys-cx.png` — marca CX, uso en Hero (`max-w-xs` dentro de card oscura)
   y como `public/favicon.png`.
 - `codexys-logo.png` — logo completo (fondo negro no transparente), reservado
