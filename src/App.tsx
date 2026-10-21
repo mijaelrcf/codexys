@@ -5,10 +5,11 @@ import { Hero } from "./components/sections/Hero";
 import { Proceso } from "./components/sections/Proceso";
 import { Servicios } from "./components/sections/Servicios";
 import { Stack } from "./components/sections/Stack";
+import { ScrollToTop } from "./components/ui/ScrollToTop";
 
 function App() {
   return (
-    <div id="inicio" className="min-h-svh bg-white text-zinc-900 dark:bg-base-950 dark:text-zinc-100">
+    <div id="inicio" className="min-h-svh bg-base-50 text-zinc-900 dark:bg-base-950 dark:text-zinc-100">
       <Header />
       <main>
         <Hero />
@@ -18,6 +19,7 @@ function App() {
         <Contacto />
       </main>
       <Footer />
+      <ScrollToTop />
     </div>
   );
 }

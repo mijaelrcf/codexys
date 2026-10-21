@@ -43,9 +43,9 @@ export function Contacto() {
   return (
     <section
       id="contacto"
-      className="scroll-mt-20 border-t border-zinc-200/70 bg-zinc-50/70 dark:border-zinc-800 dark:bg-white/[0.02]"
+      className="scroll-mt-20 border-t border-zinc-200/70 bg-white/60 dark:border-zinc-800 dark:bg-white/[0.02]"
     >
-      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:py-20 lg:grid-cols-2 lg:items-center">
+      <div className="mx-auto grid max-w-6xl gap-8 px-4 py-12 sm:py-20 lg:grid-cols-2 lg:items-center lg:gap-10">
         <div>
           <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-brand-blue">
             Contacto
@@ -56,7 +56,7 @@ export function Contacto() {
           <p className="mt-3 text-lg text-zinc-600 dark:text-zinc-400">
             Cuéntanos sobre tu proyecto y recibe una propuesta a la medida.
           </p>
-          <ul className="mt-6 space-y-3">
+          <ul className="mt-5 space-y-3 sm:mt-6">
             <li className="flex items-center gap-2.5 text-sm text-zinc-700 dark:text-zinc-300">
               <Clock className="h-4 w-4 text-brand-blue" aria-hidden="true" />
               Respondemos en menos de 24 horas.

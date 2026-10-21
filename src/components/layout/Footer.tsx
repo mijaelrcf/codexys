@@ -20,8 +20,8 @@ function LinkedinIcon({ className = "" }: { className?: string }) {
 
 export function Footer() {
   return (
-    <footer className="border-t border-zinc-200 bg-zinc-50 dark:border-zinc-800 dark:bg-black/40">
-      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-4 py-8 sm:flex-row">
+    <footer className="border-t border-zinc-200 bg-base-100/70 dark:border-zinc-800 dark:bg-black/40">
+      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-4 py-6 sm:flex-row sm:py-8">
         <a href="#inicio" className="flex items-center gap-2" aria-label="Codexys — inicio">
           <img src={logoNombre} alt="Codexys" className="h-8 w-auto" />
         </a>

@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 type Theme = "light" | "dark";
 
@@ -13,6 +13,7 @@ function getInitialTheme(): Theme {
 
 export function useTheme() {
   const [theme, setTheme] = useState<Theme>(getInitialTheme);
+  const transitionTimer = useRef<number | null>(null);
 
   useEffect(() => {
     const root = document.documentElement;
@@ -29,6 +30,20 @@ export function useTheme() {
   }, [theme]);
 
   const toggle = useCallback(() => {
+    const root = document.documentElement;
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (!reduceMotion) {
+      root.classList.add("theme-transition");
+      if (transitionTimer.current !== null) {
+        window.clearTimeout(transitionTimer.current);
+      }
+      transitionTimer.current = window.setTimeout(() => {
+        root.classList.remove("theme-transition");
+        transitionTimer.current = null;
+      }, 320);
+    }
+
     setTheme((prev) => (prev === "dark" ? "light" : "dark"));
   }, []);
 

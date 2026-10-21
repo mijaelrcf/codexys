@@ -15,7 +15,7 @@ Single-page con 7 bloques, en este orden:
 5. `Proceso` — timeline horizontal de 3 pasos:
    - Paso 1: Descubrimiento (entendemos tu negocio y planificamos la arquitectura)
    - Paso 2: Desarrollo Ágil (iteraciones rápidas y entregas continuas con feedback real)
-   - Paso 3: Despliegue y QA (pruebas exhaustivas y lanzamiento sin fricciones)
+   - Paso 3: Despliegue y QA (pruebas exhaustivas y lanzamiento)
 6. `Contacto / Conversión` — Título: "¿Listo para dar el siguiente paso?",
    Subtítulo: "Cuéntanos sobre tu proyecto y recibe una propuesta a la medida.",
    Formulario limpio (nombre, email, mensaje)

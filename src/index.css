@@ -5,14 +5,38 @@
 @theme {
   --color-brand-blue: #2e7dff;
   --color-brand-red: #ff1e2d;
+  --color-base-50: #eef1f6;
+  --color-base-100: #e1e6ef;
   --color-base-950: #05070f;
   --font-sans: system-ui, "Segoe UI", Roboto, sans-serif;
+}
+
+:root {
+  color-scheme: light;
+}
+
+.dark {
+  color-scheme: dark;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
+html.theme-transition,
+html.theme-transition *,
+html.theme-transition *::before,
+html.theme-transition *::after {
+  transition:
+    background-color 300ms ease,
+    border-color 300ms ease,
+    color 300ms ease,
+    fill 300ms ease,
+    stroke 300ms ease,
+    box-shadow 300ms ease !important;
+  transition-delay: 0s !important;
+}
+
 body {
-  @apply bg-white text-zinc-900 antialiased dark:bg-base-950 dark:text-zinc-100;
+  @apply bg-base-50 text-zinc-900 antialiased dark:bg-base-950 dark:text-zinc-100;
 }
