@@ -41,7 +41,7 @@ export function Footer() {
             ·
           </span>
           <a
-            href="https://github.com/codexys"
+            href="https://github.com/mijaelrcf"
             target="_blank"
             rel="noreferrer"
             aria-label="GitHub de Codexys"
@@ -50,7 +50,7 @@ export function Footer() {
             <GithubIcon className="h-4 w-4" />
           </a>
           <a
-            href="https://www.linkedin.com/company/codexys"
+            href="https://www.linkedin.com/in/mijaelrcf"
             target="_blank"
             rel="noreferrer"
             aria-label="LinkedIn de Codexys"
