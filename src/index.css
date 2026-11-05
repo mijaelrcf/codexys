@@ -40,3 +40,17 @@ html.theme-transition *::after {
 body {
   @apply bg-base-50 text-zinc-900 antialiased dark:bg-base-950 dark:text-zinc-100;
 }
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  60%,
+  100% {
+    transform: translateX(250%);
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 3.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}

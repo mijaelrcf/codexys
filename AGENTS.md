@@ -18,7 +18,8 @@ Single-page con 7 bloques, en este orden:
    - Paso 3: Despliegue y QA (pruebas exhaustivas y lanzamiento)
 6. `Contacto / Conversión` — Título: "¿Listo para dar el siguiente paso?",
    Subtítulo: "Cuéntanos sobre tu proyecto y recibe una propuesta a la medida.",
-   Formulario limpio (nombre, email, mensaje)
+   Formulario limpio (nombre, email, mensaje) con redirección interactiva a WhatsApp (wa.me)
+   y opción de chat directo.
 7. `Footer` — © Codexys, enlace ficticio de política de privacidad,
    enlaces a GitHub y LinkedIn
 
@@ -27,8 +28,8 @@ Single-page con 7 bloques, en este orden:
 - **Vite + React + TypeScript** (strict)
 - **Tailwind CSS v4** (vía `@tailwindcss/vite`, theme en CSS con `@theme`)
 - **Lucide React** para iconos. No usar emojis en la UI.
-- Formulario de contacto **mock solo frontend** (validación + estado de éxito simulado,
-  sin backend por ahora).
+- Redirección de contacto a **WhatsApp** (validación frontend + apertura `wa.me`
+  con mensaje estructurado y fallback en pantalla).
 
 ## 3. Comandos
 
@@ -125,15 +126,15 @@ Reglas de uso del logo:
 - Tailwind utility-first. Tokens de marca vía `@theme`, no valores hardcodeados
   sueltos (`text-[#2E7DFF]` solo como excepción puntual).
 - Iconos: solo `lucide-react` (`Search`, `Code2`, `Rocket`, `Sun`, `Moon`, `Menu`, etc.).
-  Excepción: `Github` / `Linkedin` ya no existen en `lucide-react` (removidos en v1),
-  usar mini-componentes SVG inline en `Footer.tsx` solo para esas marcas.
+  Excepción: marcas externas que ya no existen en `lucide-react` (`Github`, `Linkedin`, `WhatsApp`),
+  usar mini-componentes SVG inline para esas marcas.
 - Accesibilidad mínima:
   - `header / main / section / footer`, un solo `h1` en Hero.
   - `label` en cada campo del form, `alt="Codexys"` en logo.
   - Navegación por teclado funcional, menú móvil con `aria-expanded`.
 - UI en español. Código, props y comentarios en inglés.
-- Formularios: validación nativa + controlada, estados `idle / sending / success / error`
-  para el mock (simular envío con `setTimeout`).
+- Formularios: validación nativa + controlada, integración con WhatsApp mediante `wa.me`
+  con mensaje preformateado y pantalla de confirmación/fallback.
 
 ## 7. Skills
 

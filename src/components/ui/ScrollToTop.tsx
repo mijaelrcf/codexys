@@ -27,7 +27,7 @@ export function ScrollToTop() {
       type="button"
       onClick={handleClick}
       aria-label="Volver arriba"
-      className="fixed bottom-5 right-5 z-40 inline-flex h-11 w-11 items-center justify-center rounded-full border border-zinc-200 bg-white/90 text-zinc-700 shadow-lg shadow-zinc-900/10 backdrop-blur transition-colors hover:bg-zinc-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue focus-visible:ring-offset-2 sm:bottom-8 sm:right-8 dark:border-zinc-700 dark:bg-zinc-900/90 dark:text-zinc-200 dark:hover:bg-zinc-800 dark:focus-visible:ring-offset-base-950"
+      className="fixed bottom-22 right-[1.625rem] z-40 inline-flex h-11 w-11 items-center justify-center rounded-full border border-zinc-200 bg-white/90 text-zinc-700 shadow-lg shadow-zinc-900/10 backdrop-blur transition-all duration-200 hover:scale-105 hover:bg-zinc-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue focus-visible:ring-offset-2 sm:bottom-26 sm:right-[2.375rem] dark:border-zinc-700 dark:bg-zinc-900/90 dark:text-zinc-200 dark:hover:bg-zinc-800 dark:focus-visible:ring-offset-base-950"
     >
       <ArrowUp className="h-5 w-5" aria-hidden="true" />
     </button>

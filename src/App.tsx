@@ -5,6 +5,7 @@ import { Hero } from "./components/sections/Hero";
 import { Proceso } from "./components/sections/Proceso";
 import { Servicios } from "./components/sections/Servicios";
 import { Stack } from "./components/sections/Stack";
+import { FloatingWhatsApp } from "./components/ui/FloatingWhatsApp";
 import { ScrollToTop } from "./components/ui/ScrollToTop";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Contacto />
       </main>
       <Footer />
+      <FloatingWhatsApp />
       <ScrollToTop />
     </div>
   );

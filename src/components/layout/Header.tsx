@@ -47,11 +47,23 @@ export function Header() {
             {isDark ? <Sun className="h-4 w-4" aria-hidden="true" /> : <Moon className="h-4 w-4" aria-hidden="true" />}
           </button>
 
-          <span className="hidden md:inline-flex">
-            <Button href="#contacto" variant="primary">
-              Cotizar proyecto
+          <div className="group relative hidden md:inline-flex">
+            <div
+              aria-hidden="true"
+              className="absolute -inset-0.5 rounded-xl bg-gradient-to-r from-brand-blue to-blue-400 opacity-40 blur-xs transition duration-300 group-hover:opacity-90"
+            />
+            <Button
+              href="#contacto"
+              variant="primary"
+              className="relative overflow-hidden shadow-sm shadow-brand-blue/20"
+            >
+              <span
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-0 -translate-x-full animate-shimmer bg-gradient-to-r from-transparent via-white/25 to-transparent"
+              />
+              <span>Cotizar proyecto</span>
             </Button>
-          </span>
+          </div>
 
           <button
             type="button"
@@ -80,8 +92,17 @@ export function Header() {
               </li>
             ))}
             <li className="pt-2">
-              <Button href="#contacto" variant="primary" className="w-full" onClick={() => setOpen(false)}>
-                Cotizar proyecto
+              <Button
+                href="#contacto"
+                variant="primary"
+                className="relative w-full overflow-hidden shadow-md shadow-brand-blue/20"
+                onClick={() => setOpen(false)}
+              >
+                <span
+                  aria-hidden="true"
+                  className="pointer-events-none absolute inset-0 -translate-x-full animate-shimmer bg-gradient-to-r from-transparent via-white/20 to-transparent"
+                />
+                <span>Cotizar proyecto</span>
               </Button>
             </li>
           </ul>

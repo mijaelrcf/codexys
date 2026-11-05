@@ -52,12 +52,26 @@ export function Hero() {
             ágil, código limpio y lanzamiento.
           </p>
 
-          <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row">
-            <Button href="#contacto" variant="primary" className="px-6 py-3 text-base">
-              Cotizar mi proyecto
-              <ArrowRight className="h-4 w-4" aria-hidden="true" />
-            </Button>
-            <Button href="#servicios" variant="ghost" className="border border-zinc-300 px-6 py-3 text-base dark:border-zinc-700">
+          <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:items-center">
+            <div className="group relative inline-flex">
+              <div
+                aria-hidden="true"
+                className="absolute -inset-0.5 rounded-2xl bg-gradient-to-r from-brand-blue via-blue-500 to-brand-red opacity-65 blur-md transition-all duration-500 group-hover:opacity-100 group-hover:blur-lg"
+              />
+              <Button
+                href="#contacto"
+                variant="primary"
+                className="relative overflow-hidden px-7 py-3.5 text-base font-bold shadow-xl shadow-brand-blue/25 transition-transform duration-300 group-hover:scale-[1.02]"
+              >
+                <span
+                  aria-hidden="true"
+                  className="pointer-events-none absolute inset-0 -translate-x-full animate-shimmer bg-gradient-to-r from-transparent via-white/30 to-transparent"
+                />
+                <span>Cotizar mi proyecto</span>
+                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" />
+              </Button>
+            </div>
+            <Button href="#servicios" variant="ghost" className="border border-zinc-300 px-6 py-3.5 text-base dark:border-zinc-700">
               Ver servicios
             </Button>
           </div>

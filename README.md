@@ -8,9 +8,9 @@ responsive y con tema claro / oscuro.
 
 - [Vite](https://vite.dev/) + [React](https://react.dev/) + TypeScript (strict)
 - [Tailwind CSS v4](https://tailwindcss.com/) (vía `@tailwindcss/vite`)
-- [Lucide React](https://lucide.dev/) para iconos (las marcas GitHub/LinkedIn son
-  SVG inline porque Lucide v1 las removió)
-- Formulario de contacto **mock solo frontend** (sin backend por ahora)
+- [Lucide React](https://lucide.dev/) para iconos (las marcas GitHub/LinkedIn/WhatsApp son
+  SVG inline porque Lucide v1 no incluye iconos de marcas comerciales)
+- Integración directa con **WhatsApp** para contacto (redirección `wa.me` con mensaje estructurado)
 
 ## Requisitos
 
@@ -93,12 +93,12 @@ AGENTS.md                # lineamientos del proyecto para agentes
 - `codexys-logo.png` (logo completo, fondo negro no transparente): reservado para
   usos sobre oscuro u OG-image; si se usa en UI clara, envolver en contenedor oscuro.
 
-## Formulario de contacto
+## Contacto y WhatsApp
 
-Mock frontend con estados `idle / sending / success / error` (envío simulado con
-`setTimeout`, sin backend). Campos: nombre, email, mensaje. Para conectarlo a un
-backend real (Formspree, Resend, etc.), reemplazar la simulación en
-`src/components/sections/Contacto.tsx`.
+La sección de contacto redirige de forma fluida a WhatsApp:
+- **Formulario estructurado:** solicita nombre, email y mensaje del proyecto; al enviar, construye un mensaje estructurado y abre automáticamente `https://wa.me/<NUMERO>?text=...` en una nueva pestaña, ofreciendo también un botón de respaldo en caso de que el navegador bloquee la ventana emergente.
+- **Atención directa rápida:** botón en la columna informativa para abrir chat instantáneo sin llenar el formulario.
+- **Configuración:** el número de WhatsApp se puede definir en `src/config/contact.ts` o configurando la variable de entorno `VITE_WHATSAPP_PHONE` (formato internacional sin signos `+`, por ejemplo `59170000000`).
 
 ## Despliegue
 
